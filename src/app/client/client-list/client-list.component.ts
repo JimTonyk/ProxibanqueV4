@@ -16,12 +16,8 @@ export class ClientListComponent implements OnInit {
     this.clientService.loadClients().subscribe(data => this.listeClients = data);
   }
 
-  addClient() {
-    alert('Client ajouté !');
-  }
-
-  deleteClient() {
-    alert('Client effacé !');
+  deleteClient(idClient){
+    this.clientService.deleteClient(idClient).subscribe();
 
   }
 

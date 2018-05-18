@@ -15,11 +15,11 @@
 
   <!-- Affichage dynamique si aucun quiz est affiché -->
   <h2 *ngIf="listeClients.length === 0">
-    Aucun quiz trouvé
+    Aucun client affecté à ce conseiller
   </h2>
 
   <!-- Boucle sur la liste des quizzes en appelant une boucle sur la variable quizList -->
-  <div class="col-sm-6" *ngFor="let currentClient of listeClients">
+  <div class="col-sm-4" *ngFor="let currentClient of listeClients">
     <!-- {{currentClient.nom}} -->
     <app-client-item [client]="currentClient"></app-client-item>
     <!-- <app-quiz-item [quiz]="currentQuiz"></app-quiz-item> -->
