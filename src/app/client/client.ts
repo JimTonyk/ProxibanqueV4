@@ -7,4 +7,6 @@ export interface Client{
   login: string;
   password: string;
   conseiller: Conseiller;
+  
+  constructor()
 }
