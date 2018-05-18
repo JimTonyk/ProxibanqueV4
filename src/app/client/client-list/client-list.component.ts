@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../client';
+import { ClientService } from '../client.service';
 
 @Component({
   selector: 'app-client-list',
@@ -6,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private clientService: ClientService) { }
+
+  listeClients: Client[] = [];
 
   ngOnInit() {
+    this.clientService.loadClients().subscribe(data => this.listeClients = data);
+  }
+
+  addClient() {
+    alert('Client ajouté !');
+  }
+
+  deleteClient() {
+    alert('Client effacé !');
+
   }
 
 }

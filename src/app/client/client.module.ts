@@ -4,6 +4,7 @@ import { ClientListComponent } from './client-list/client-list.component';
 import { ClientFormComponent } from './client-form/client-form.component';
 import { ClientService } from './client.service';
 import { RouterModule, Routes } from '@angular/router';
+import { ClientItemComponent } from './client-item/client-item.component';
 
 const routes: Routes= [
   { path: 'listeClients', component: ClientListComponent },
@@ -18,7 +19,8 @@ const routes: Routes= [
     RouterModule.forChild(routes)
   ],
   declarations: [ClientListComponent,
-                 ClientFormComponent],
+                 ClientFormComponent,
+                 ClientItemComponent],
   providers: [ClientService],
   
 })
